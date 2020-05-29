@@ -3,6 +3,7 @@ const HTTP_SERVER_PORT = 3000;
 const express = require('express');
 const app = express();
 const addModule = require('./math-operations/add');
+const addModule2 = require('./math-operations/circle-params');
 
 // setting routing https://expressjs.com/en/starter/basic-routing.html
 app.get('/api/add/:a/:b', (req, res) => {
