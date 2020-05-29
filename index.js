@@ -17,26 +17,14 @@ app.get('/api/add/:a/:b', (req, res) => {
     }
 })
 
-app.get('/api/circle-params/:r1/', (req, res) => {
+app.get('/api/circle-params/:r1/:r2/', (req, res) => {
     const r1 = req.params.r1;
-
-    
-    try {
-        const circleField = { r1: r1, circleField: addModule2.circleField(r1) };
-         res.send(JSON.stringify(circleField));
-        
-    } catch (e) {
-        res.status(400).json({ error: e })
-    }
-})
-app.get('/api/circle-params/:r2/', (req, res) => {
- 
     const r2 = req.params.r2;
     
     try {
-        const circleCircuit = { r2: r2, circleCircuit: addModule2.circleCircuit(r2) };
-       
-        res.send(JSON.stringify(circleCircuit));
+        const circle = { r1: r1, r2: r2, circleField: addModule2.circleField(r1),circleCircuit: addModule2.circleCircuit(r2) };
+         res.send(JSON.stringify(circle));
+        
     } catch (e) {
         res.status(400).json({ error: e })
     }
