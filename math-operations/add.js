@@ -8,3 +8,5 @@ function add(a, b) {
 }
 
 module.exports.add = add;
+
+// zmiana Krzysztof Łyda
