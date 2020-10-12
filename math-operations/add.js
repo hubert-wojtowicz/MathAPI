@@ -8,3 +8,5 @@ function add(a, b) {
 }
 
 module.exports.add = add;
+
+// a to jest moj komentarz
